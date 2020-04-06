@@ -28,14 +28,14 @@ secondhalf = a[int(half):]
 print(a[half-1:half+1])
 
 # Output every element except the first one: [4, 1, 7, 9, 6]
-print(a[0:])
+print(a[1:])
 
 # Output every element except the last one: [2, 4, 1, 7, 9]
-print()
+print(a[:-1])
 
 # For string s...
 
 s = "Hello, world!"
 
 # Output just the 8th-12th characters: "world"
-print()
+print(s[7:12])
