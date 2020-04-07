@@ -31,7 +31,7 @@ import sys
 import calendar
 from datetime import datetime
 
-def isNumbers(num1, num2):
+def isInCorrectFormat(num1, num2):
 	try:
 		return type(int(num1)) == int and type(int(num2)) == int and len(num1) == 2 and len(num2) == 4 and int(num1) <= 12 and int(num1) > 0
 	except Exception as e:
@@ -48,7 +48,7 @@ def start():
 		print(cal.formatmonth(now.year, now.month))
 	elif len(sys.argv) == 3:
 		(_, month, year) = sys.argv
-		if isNumbers(month, year):
+		if isInCorrectFormat(month, year):
 			user_chosen_month = int(month)
 			user_chosen_year = abs(int(year))
 			print(cal.formatmonth(user_chosen_year, user_chosen_month))
